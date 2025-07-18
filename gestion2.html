@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Envios - Control</title>
+    <link rel="shotcut icon" href="img/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+     <!-- Bootstrap 5 --
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>--
+ 
+     
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
+     <-- FontAwesome para iconos --
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">-->
+ 
+     <!-- MDB UI Kit CSS -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+ 
+     
+</head>
+
+<body id="gestion">
+
+    <header class="container-fluid bg-light py-2" id="headerContainer"></header>
+
+    <main id="main">
+
+        <!-- CONTROL -->
+        <div class="panel" id="panel">
+            <div class="container-fluid px-2 mt-2">
+                <div>
+
+                    <div class="container-fluid px-3 mt-2">
+                        <div class="card px-2 py-2 shadow">
+                            <h5 class="text-center mb-3">Gestion de los Agotados</h5>
+
+                            <div class="row mb-3">
+                                <div class="col-sm-2">
+                                    <label for="filtroFecha" class="form-label">Seleccione Fecha:</label>
+                                    <input type="date" id="filtroFecha" class="form-control form-control-sm" />
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="filtroEstado" class="form-label">Filtrar por Estado:</label>
+                                    <select id="filtroEstado" class="form-select form-select-sm"></select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="filtroAsesor" class="form-label">Filtrar por Asesor:</label>
+                                    <select id="filtroAsesor" class="form-select form-select-sm"></select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="filtroMotivo" class="form-label">Filtrar por Motivo:</label>
+                                    <select id="filtroMotivo" class="form-select form-select-sm"></select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <label for="filtroTipo" class="form-label">Filtrar por Tipo:</label>
+                                    <select id="filtroTipo" class="form-select form-select-sm"></select>
+                                </div>
+                                <div class="col-sm-2">
+                                    <button type="button" class="btn btn-success btn-sm h-100"
+                                        id="botonactu">Actualizar</button>
+                                    <button type="button" class="btn btn-secondary btn-sm h-100"
+                                        id="botonclear">Limpiar</button>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-12" id="filgestion">
+                                    <label for="filtroGestion" class="form-label">Seleccione Gestión:</label>
+                                    <select id="filtroGestion" class="form-select" multiple
+                                        data-mdb-select-search="true" data-mdb-select-select-all="true"
+                                        data-mdb-select-init data-mdb-select-title="Seleccione gestión..."
+                                        style="min-height: 160px;">
+                                        <!-- Aquí se inyectarán las <option> vía JS -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table id="datosagotados" class="table table-bordered table-striped table-sm"
+                                    style="table-layout: fixed; width: 100%;">
+
+                                    <!-- Colgroup: un <col> por cada columna -->
+                                    <colgroup>
+                                        <col class="compact-cod"> <!-- EXT. -->
+                                        <col class="adjustable-col"> <!-- ITEM -->
+                                        <col class="adjustable-col"><!-- MOTIVO -->
+                                        <col class="adjustable-col"> <!-- OBSERVACION -->
+                                        <col class="compact-col"> <!-- TIPO -->
+                                        <col class="compact-col"> <!-- ESTADO -->
+                                        <col class="compact-cod"> <!-- Ver (botón) -->
+                                    </colgroup>
+
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th class="p-2 text-center">Ext</th>
+                                            <th class="p-2 text-center">Item</th>
+                                            <th class="p-2 text-center">Motivo</th>
+                                            <th class="p-2 text-center">Observacion</th>
+                                            <th class="p-2 text-center">Tipo</th>
+                                            <th class="p-2 text-center">Estado</th>
+                                            <th class="p-2 text-center">Ver</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="tablaA">
+                                        <!-- Se rellena dinámicamente desde JS -->
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- MDB UI Kit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js" integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+    <script src="script/accion.js"></script>
+
+</body>
+
+</html>

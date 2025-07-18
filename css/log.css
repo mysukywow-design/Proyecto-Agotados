@@ -1,0 +1,87 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-image: url(../img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover; 
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container img {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 100px;
+}
+
+.login-container h5 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.form-label {
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group-text {
+  background-color: #e9ecef;
+  border: none;
+}
+
+.password-toggle {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+.input-group-text {
+  margin-right: 10px;
+}
+
+
+#reg {
+  text-decoration: none;
+  color: beige;
+}
